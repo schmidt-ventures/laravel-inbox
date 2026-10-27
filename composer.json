@@ -1,0 +1,44 @@
+{
+    "name": "schmidt-ventures/laravel-inbox",
+    "description": "Local mail inbox for Laravel. Captures outgoing mail in the application instead of an SMTP server.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.2",
+        "illuminate/http": "^12.0 || ^13.17",
+        "illuminate/mail": "^12.0 || ^13.17",
+        "illuminate/routing": "^12.0 || ^13.17",
+        "illuminate/support": "^12.0 || ^13.17",
+        "illuminate/view": "^12.0 || ^13.17"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0 || ^11.3",
+        "phpunit/phpunit": "^11.5 || ^12.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SchmidtVentures\\Inbox\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SchmidtVentures\\Inbox\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SchmidtVentures\\Inbox\\InboxServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit"
+    }
+}
